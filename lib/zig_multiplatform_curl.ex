@@ -8,9 +8,14 @@ defmodule ExCurl.Zig.MultiPlatformCurl do
 
   @load_order [
     %{
-      name: :debian,
+      name: :debian_x86_64,
       lib: "/usr/lib/x86_64-linux-gnu/libcurl.so",
       include: "/usr/include/x86_64-linux-gnu/curl"
+    },
+    %{
+      name: :debian_aarch64,
+      lib: "/usr/lib/aarch64-linux-gnu/libcurl.so",
+      include: "/usr/include/aarch64-linux-gnu/curl"
     },
     %{name: :arch, lib: "/usr/lib/libcurl.so", include: "/usr/include/curl"},
     %{
